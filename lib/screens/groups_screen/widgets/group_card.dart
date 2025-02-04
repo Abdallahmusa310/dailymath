@@ -64,7 +64,7 @@ class GroupCard extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return Studentscreen.studentscreen(
-                    dayname: "",
+                    groupname: 'Group:${group.groupname!}',
                     day: day,
                     groupId: group.id!,
                   );
@@ -105,7 +105,7 @@ class GroupCard extends StatelessWidget {
                             context: context,
                             builder: (context) {
                               return Studentscreen.studentscreen(
-                                dayname: "",
+                                groupname: 'Group:${group.groupname!}',
                                 day: day,
                                 groupId: group.id ?? 0,
                               );

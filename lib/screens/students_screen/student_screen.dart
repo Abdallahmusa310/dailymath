@@ -1,3 +1,5 @@
+import 'package:dialymath/screens/students_screen/widgets/student_sheet.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:dialymath/screens/students_screen/widgets/students_list.dart';
 import 'package:flutter/material.dart';
@@ -7,11 +9,11 @@ import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 class Studentscreen extends StatefulWidget {
   const Studentscreen.studentscreen({
     super.key,
-    required this.dayname,
+    required this.groupname,
     required this.day,
     required this.groupId,
   });
-  final String dayname;
+  final String groupname;
   final int day;
   final int groupId;
 
@@ -29,6 +31,19 @@ class _StudentscreenState extends State<Studentscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: CoustmBt(
+          bttext: 'Add student',
+          ontab: () {
+            showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                builder: (context) {
+                  return StudentSheet(
+                    day: widget.day,
+                    groupId: widget.groupId,
+                  );
+                });
+          }),
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
@@ -44,7 +59,7 @@ class _StudentscreenState extends State<Studentscreen> {
                     },
                     icon: const Icon(Icons.exit_to_app)),
                 CoustmText(
-                  text: widget.dayname,
+                  text: widget.groupname,
                   textcolor: Colors.black,
                   textsize: 25,
                 ),

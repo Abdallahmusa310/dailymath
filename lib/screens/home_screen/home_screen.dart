@@ -1,5 +1,6 @@
 import 'package:dialymath/screens/home_screen/widgets/listofgroups.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,19 +9,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.only(top: 70, left: 8, right: 8),
+      padding: EdgeInsets.only(top: 70.h, left: 8.w, right: 8.w),
       child: Column(
         children: [
           Row(
             children: [
               Image.asset(
                 'assets/p1.png',
-                width: 50,
-                height: 50,
+                width: 50.w,
+                height: 50.h,
               ),
-              const Text(
+              Text(
                 ' Daily Math',
-                style: TextStyle(fontSize: 30),
+                style: TextStyle(fontSize: 30.sp),
               ),
             ],
           ),
@@ -30,32 +31,3 @@ class HomeScreen extends StatelessWidget {
     ));
   }
 }
-
-
-
-// Column(
-//           children: [
-//             Row(children:
-//              [
-//              Image.asset('assets/p1.png',width:50,height:50,),
-//              const Text(' Daily Math',style: TextStyle(fontSize: 30),),
-//              ],
-//              ),
-            
-//           ],
-//         ),
-
-
-// ody:  Padding(
-//         padding:EdgeInsets.only(
-//         top: 60,
-//         right: 14,
-//         left: 14
-//         ),
-//         child: Column(
-//           children: [
-//           CoustmAppbar(),
-//           Expanded(child:Listofdays()),
-//           ],
-//         ),
-//       ),

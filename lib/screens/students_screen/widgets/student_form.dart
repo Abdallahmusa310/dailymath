@@ -40,7 +40,6 @@ class _StudentFormState extends State<StudentForm> {
                     ),
                     CoustmTextfield(
                         hinttext: 'Student name',
-                        // TODO: Store user input
                         onsave: (value) {
                           name = value;
                         }),
@@ -49,7 +48,6 @@ class _StudentFormState extends State<StudentForm> {
                     ),
                     CoustmTextfield(
                       hinttext: 'phone',
-                      // TODO: Store user input
                       onsave: (value) {
                         phone = value;
                       },

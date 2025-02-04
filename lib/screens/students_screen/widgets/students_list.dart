@@ -1,6 +1,5 @@
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/screens/students_screen/widgets/student_card.dart';
-import 'package:dialymath/screens/students_screen/widgets/student_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,20 +21,6 @@ class _StudentlistState extends State<Studentlist> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        FloatingActionButton(
-          onPressed: () {
-            showModalBottomSheet(
-                isScrollControlled: true,
-                context: context,
-                builder: (context) {
-                  return StudentSheet(
-                    day: widget.day,
-                    groupId: widget.groupId,
-                  );
-                });
-          },
-          child: const Icon(Icons.add),
-        ),
         const SizedBox(height: 16),
         Expanded(
           child: BlocBuilder<StudentCubit, StudentState>(
@@ -43,14 +28,12 @@ class _StudentlistState extends State<Studentlist> {
               if (state is AddStudentLoading) {
                 return const Center(child: CircularProgressIndicator());
               }
-
               final students = state.student;
               if (students == null || students.isEmpty) {
                 return const Center(
                   child: Text('No students found'),
                 );
               }
-
               return ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   itemCount: students.length,

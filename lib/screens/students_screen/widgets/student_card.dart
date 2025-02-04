@@ -1,6 +1,5 @@
 import 'package:dialymath/models/student_model.dart';
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:dialymath/screens/students_screen/widgets/edit_Student_sheet.dart';
 import 'package:flutter/material.dart';
@@ -71,49 +70,40 @@ class Studentcard extends StatelessWidget {
           child: Column(
             children: [
               ListTile(
-                  title: CoustmText(
-                    text: studentmodel.studentname,
-                    textcolor: Colors.black,
-                    textsize: 25,
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () async {
-                              final Uri uri = Uri(
-                                scheme: 'tel',
-                                path: studentmodel.parentrhone,
-                              );
-                              await launchUrl(uri);
-                            },
-                            icon: const Icon(Icons.call),
-                            color: const Color.fromARGB(255, 17, 34, 184),
-                          ),
-                          Text(studentmodel.parentrhone),
-                        ],
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          launchUrl(whatsapp);
-                        },
-                        icon: const FaIcon(FontAwesomeIcons.whatsapp),
-                        color: const Color.fromARGB(255, 21, 124, 44),
-                      )
-                    ],
-                  ),
-                  trailing: CoustmBticon(
-                    icon: Icons.delete,
-                    height: 40,
-                    width: 50,
-                    ontab: () {
-                      studentmodel.delete();
-                      BlocProvider.of<StudentCubit>(context)
-                          .fetchAllstudents(studentmodel.idgroup);
-                    },
-                  ))
+                title: CoustmText(
+                  text: studentmodel.studentname,
+                  textcolor: Colors.black,
+                  textsize: 25,
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            final Uri uri = Uri(
+                              scheme: 'tel',
+                              path: studentmodel.parentrhone,
+                            );
+                            await launchUrl(uri);
+                          },
+                          icon: const Icon(Icons.call),
+                          color: const Color.fromARGB(255, 17, 34, 184),
+                        ),
+                        Text(studentmodel.parentrhone),
+                      ],
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        launchUrl(whatsapp);
+                      },
+                      icon: const FaIcon(FontAwesomeIcons.whatsapp),
+                      color: const Color.fromARGB(255, 21, 124, 44),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -121,10 +111,3 @@ class Studentcard extends StatelessWidget {
     );
   }
 }
-
-
-              //  final Uri uri = Uri(
-              //         scheme: 'tel',
-              //         path: group.studentnumper,
-              //       );
-              //       await launchUrl(uri);
