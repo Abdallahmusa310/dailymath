@@ -1,4 +1,4 @@
-import 'package:dialymath/widgets/coustm_card.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_card.dart';
 import 'package:flutter/material.dart';
 
 class Listofgroups extends StatelessWidget {
@@ -7,7 +7,7 @@ class Listofgroups extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:const EdgeInsets.all(32),
+      padding: const EdgeInsets.all(32),
       child: ListView(
         physics: const ScrollPhysics(parent: BouncingScrollPhysics()),
         children: const [
@@ -16,7 +16,7 @@ class Listofgroups extends StatelessWidget {
             dayname: 'Saturday',
             day: 1,
           ),
-        SizedBox(
+          SizedBox(
             height: 30,
           ),
           CoustmCard(

@@ -1,8 +1,8 @@
 import 'package:dialymath/models/student_model.dart';
-import 'package:dialymath/screen/students_screen/cubit/student_cubit.dart';
-import 'package:dialymath/widgets/coustm_bt.dart';
-import 'package:dialymath/widgets/coustm_text.dart';
-import 'package:dialymath/screen/students_screen/widgets/edit_Student_sheet.dart';
+import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
+import 'package:dialymath/screens/students_screen/widgets/edit_Student_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -44,7 +44,8 @@ class Studentcard extends StatelessWidget {
             icon: Icons.delete,
             onPressed: (context) => {
                   studentmodel.delete(),
-                  BlocProvider.of<StudentCubit>(context).fetchAllstudents(studentmodel.idgroup),
+                  BlocProvider.of<StudentCubit>(context)
+                      .fetchAllstudents(studentmodel.idgroup),
                 })
       ]),
       child: Container(

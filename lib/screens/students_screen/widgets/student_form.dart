@@ -1,7 +1,7 @@
-import 'package:dialymath/screen/students_screen/cubit/student_cubit.dart';
+import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/models/student_model.dart';
-import 'package:dialymath/widgets/coustm_bt.dart';
-import 'package:dialymath/widgets/coustm_textfield.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

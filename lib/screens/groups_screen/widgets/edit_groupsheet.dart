@@ -1,6 +1,6 @@
-import 'package:dialymath/screen/students_screen/cubit/student_cubit.dart';
+import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/screen/groups_screen/widgets/edit_groupform.dart';
+import 'package:dialymath/screens/groups_screen/widgets/edit_groupform.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/group_cubit.dart';

@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:dialymath/screen/home_screen/home_screen.dart';
-import 'package:dialymath/widgets/menu_view.dart';
-import 'package:dialymath/screen/setting_screen/setting_screen.dart';
+import 'package:dialymath/screens/home_screen/home_screen.dart';
+import 'package:dialymath/screens/menu_screen/menu_screen.dart';
+import 'package:dialymath/screens/setting_screen/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 class Navbar extends StatefulWidget {

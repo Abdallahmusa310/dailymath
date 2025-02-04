@@ -1,9 +1,9 @@
-import 'package:dialymath/screen/groups_screen/cubit/group_cubit.dart';
+import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
 import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/widgets/coustm_bt.dart';
-import 'package:dialymath/widgets/coustm_text.dart';
-import 'package:dialymath/screen/groups_screen/widgets/edit_groupsheet.dart';
-import 'package:dialymath/screen/students_screen/student_screen.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
+import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
+import 'package:dialymath/screens/groups_screen/widgets/edit_groupsheet.dart';
+import 'package:dialymath/screens/students_screen/student_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
