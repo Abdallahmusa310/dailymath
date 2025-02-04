@@ -8,9 +8,9 @@ sealed class StudentState {
 }
 
 final class StudentInitial extends StudentState {
-  StudentInitial():super(student: []);
-
+   StudentInitial() : super(student: []);
 }
+
 class AddStudentLoading extends StudentState {
   const AddStudentLoading(List<StudentModel>? students) : super(student: students);
 }
@@ -25,4 +25,3 @@ class AddStudentFailure extends StudentState {
 
   
 }
-

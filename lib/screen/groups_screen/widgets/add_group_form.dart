@@ -1,6 +1,7 @@
 import 'package:dialymath/models/group_model.dart';
 import 'package:dialymath/screen/groups_screen/cubit/group_cubit.dart';
 import 'package:dialymath/widgets/coustm_bt.dart';
+import 'package:dialymath/widgets/coustm_dropdown.dart';
 import 'package:dialymath/widgets/coustm_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,6 +12,7 @@ class AddGroupForm extends StatefulWidget {
   @override
   State<AddGroupForm> createState() => _AddGroupFormState();
 }
+
 class _AddGroupFormState extends State<AddGroupForm> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -25,7 +27,7 @@ class _AddGroupFormState extends State<AddGroupForm> {
               padding: const EdgeInsets.all(16),
               child: Form(
                 key: formKey,
-                autovalidateMode:autovalidateMode,
+                autovalidateMode: autovalidateMode,
                 child: Column(
                   children: [
                     const SizedBox(
@@ -39,8 +41,7 @@ class _AddGroupFormState extends State<AddGroupForm> {
                     const SizedBox(
                       height: 20,
                     ),
-                    CoustmTextfield(
-                      hinttext: 'grade',
+                    CoustmDropdown(
                       onsave: (value) {
                         grade = value;
                       },

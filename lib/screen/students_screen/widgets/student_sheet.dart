@@ -7,8 +7,10 @@ class StudentSheet extends StatefulWidget {
   const StudentSheet({
     super.key,
     required this.day,
+    required this.groupId,
   });
   final int day;
+  final int groupId;
 
   @override
   State<StudentSheet> createState() => _StudentSheetState();
@@ -20,25 +22,26 @@ class _StudentSheetState extends State<StudentSheet> {
     return BlocConsumer<StudentCubit, StudentState>(
       listener: (context, state) {
         if (state is AddStudentFailure) {
-          print('faield${state.errMessage}');
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(state.errMessage)),
+          );
         }
         if (state is AddStudentSuccess) {
           Navigator.pop(context);
         }
       },
       builder: (context, state) {
-        return AbsorbPointer(
-            absorbing: state is AddStudentLoading ? true : false,
-            child: Padding(
-              padding: EdgeInsets.only(
-                  left: 16,
-                  right: 16,
-                  bottom: MediaQuery.of(context).viewInsets.bottom),
-              child: SingleChildScrollView(
-                  child: StudentForm(
-                day: widget.day,
-              )),
-            ));
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: SingleChildScrollView(
+            child: StudentForm(
+              day: widget.day,
+              groupId: widget.groupId,
+            ),
+          ),
+        );
       },
     );
   }

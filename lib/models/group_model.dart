@@ -1,9 +1,9 @@
 import 'package:hive/hive.dart';
-part   'group_model.g.dart';
+part 'group_model.g.dart';
 
-@HiveType(typeId:0)
+@HiveType(typeId: 0)
 class GroupModel extends HiveObject {
-@HiveField(0)
+  @HiveField(0)
   String? groupname;
 
   @HiveField(1)
@@ -26,7 +26,6 @@ class GroupModel extends HiveObject {
 
   // Add this field to store the auto-generated group ID.
 
-
   GroupModel({
     this.groupname,
     this.groupgrade,
@@ -38,9 +37,3 @@ class GroupModel extends HiveObject {
     // Include the groupid in the constructor.
   });
 }
-
-
-
-
-
-

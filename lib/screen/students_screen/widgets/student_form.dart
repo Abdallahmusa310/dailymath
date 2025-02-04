@@ -9,12 +9,10 @@ class StudentForm extends StatefulWidget {
   const StudentForm({
     super.key,
     required this.day,
-    //TODO: Provide a default value untill
-    //TODO: you how group id is added
-    this.groupId = 0,
+    required this.groupId,
   });
   final int day;
-  final int? groupId;
+  final int groupId;
 
   @override
   State<StudentForm> createState() => _StudentFormState();
@@ -67,14 +65,14 @@ class _StudentFormState extends State<StudentForm> {
                           builder: (context, state) {
                             return CoustmBt(
                               bttext: 'Add Student',
-                              isload: State is AddStudentLoading ? true : false,
-                              ontab:(){
+                              isload: state is AddStudentLoading ? true : false,
+                              ontab: () {
                                 if (formKey.currentState!.validate()) {
                                   formKey.currentState!.save();
                                   var studentmodel = StudentModel(
                                       studentname: name!,
                                       parentrhone: phone!,
-                                      idgroup: widget.groupId!);
+                                      idgroup: widget.groupId);
                                   BlocProvider.of<StudentCubit>(context)
                                       .addstudent(studentmodel);
                                 } else {

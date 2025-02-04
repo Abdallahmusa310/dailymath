@@ -8,17 +8,19 @@ class Splashscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen
-    (
-      splash:  Column(
-      children: [
-        Center(
-          child:LottieBuilder.asset('assets/Animation - 1724422585602.json')
-          )
-      ],
-          ), 
-    nextScreen: const Navbar(),
-    splashIconSize: 500,
+    return AnimatedSplashScreen(
+      splash: Column(
+        children: [
+          Center(
+              child:
+                  LottieBuilder.asset('assets/Animation - 1724422585602.json'))
+        ],
+      ),
+      nextScreen: const Navbar(),
+      splashIconSize: 500,
+      duration: 5,
+      // duration: 3500,
+      centered: true,
     );
   }
 }

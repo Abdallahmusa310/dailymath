@@ -9,20 +9,20 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class Studentcard extends StatelessWidget {
   const Studentcard(
       {super.key,
       required this.colorbordertow,
-      required this.group,
+      required this.studentmodel,
       required this.day});
   final Color colorbordertow;
-  final StudentModel group;
+  final StudentModel studentmodel;
   final int day;
 
   @override
   Widget build(BuildContext context) {
-    final Uri whatsapp = Uri.parse('https://wa.me/+02${group.parentrhone}');
+    final Uri whatsapp =
+        Uri.parse('https://wa.me/+02${studentmodel.parentrhone}');
     return Slidable(
       startActionPane: ActionPane(motion: const StretchMotion(), children: [
         SlidableAction(
@@ -35,7 +35,7 @@ class Studentcard extends StatelessWidget {
                 builder: (context) {
                   return Editsheet(
                     day: day,
-                    student: group,
+                    student: studentmodel,
                   );
                 })),
         SlidableAction(
@@ -43,8 +43,8 @@ class Studentcard extends StatelessWidget {
             label: 'delet',
             icon: Icons.delete,
             onPressed: (context) => {
-                  group.delete(),
-                   BlocProvider.of<StudentCubit>(context).fetchAllstudents(day)
+                  studentmodel.delete(),
+                  BlocProvider.of<StudentCubit>(context).fetchAllstudents(studentmodel.idgroup),
                 })
       ]),
       child: Container(
@@ -63,7 +63,7 @@ class Studentcard extends StatelessWidget {
                 builder: (context) {
                   return Editsheet(
                     day: day,
-                    student: group,
+                    student: studentmodel,
                   );
                 });
           },
@@ -71,7 +71,7 @@ class Studentcard extends StatelessWidget {
             children: [
               ListTile(
                   title: CoustmText(
-                    text: group.studentname,
+                    text: studentmodel.studentname,
                     textcolor: Colors.black,
                     textsize: 25,
                   ),
@@ -84,14 +84,14 @@ class Studentcard extends StatelessWidget {
                             onPressed: () async {
                               final Uri uri = Uri(
                                 scheme: 'tel',
-                                path: group.parentrhone,
+                                path: studentmodel.parentrhone,
                               );
                               await launchUrl(uri);
                             },
                             icon: const Icon(Icons.call),
                             color: const Color.fromARGB(255, 17, 34, 184),
                           ),
-                          Text(group.parentrhone),
+                          Text(studentmodel.parentrhone),
                         ],
                       ),
                       IconButton(
@@ -108,8 +108,9 @@ class Studentcard extends StatelessWidget {
                     height: 40,
                     width: 50,
                     ontab: () {
-                      group.delete();
-                      // BlocProvider.of<GroupCubit>(context).fetchAllgroups(day);
+                      studentmodel.delete();
+                      BlocProvider.of<StudentCubit>(context)
+                          .fetchAllstudents(studentmodel.idgroup);
                     },
                   ))
             ],

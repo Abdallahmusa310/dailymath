@@ -7,6 +7,7 @@ import 'package:dialymath/simple_bloc_observer.dart';
 import 'package:dialymath/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 
 void main() async {
@@ -27,13 +28,20 @@ class Dialymath extends StatelessWidget {
         BlocProvider(
           create: (context) => GroupCubit(),
         ),
-         BlocProvider(
-          create: (context) => StudentCubit()
-        )
+        BlocProvider(create: (context) => StudentCubit())
       ],
       child: MaterialApp(
         home: const Splashscreen(),
         debugShowCheckedModeBanner: false,
+        supportedLocales: const [
+          Locale('en'), // English first
+          Locale('ar'), // Arabic
+        ],
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
         routes: {
           'SplashScreen': (context) => const Splashscreen(),
         },
