@@ -1,5 +1,6 @@
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoustmBt extends StatelessWidget {
   const CoustmBt(
@@ -13,22 +14,24 @@ class CoustmBt extends StatelessWidget {
     return GestureDetector(
       onTap: ontab,
       child: Container(
-        height: 40,
-        width: 110,
+        height: 40.h,
+        width: 110.w,
         decoration: BoxDecoration(
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
-                  spreadRadius: -10, blurRadius: 28, color: Color(0xffa963d7))
+                  spreadRadius: -10.r,
+                  blurRadius: 28.r,
+                  color: Color(0xffa963d7))
             ],
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8.r),
             gradient: const LinearGradient(
                 colors: [Color(0xff407bff), Color(0xff9467dd)])),
         child: Center(
             child: isload
-                ? const SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: CircularProgressIndicator(
+                ? SizedBox(
+                    width: 20.w,
+                    height: 20.h,
+                    child: const CircularProgressIndicator(
                       strokeWidth: 2.5,
                       color: Colors.white,
                     ))
@@ -55,9 +58,11 @@ class CoustmBticon extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
-                  spreadRadius: -10, blurRadius: 28, color: Color(0xffa963d7))
+                  spreadRadius: -10.r,
+                  blurRadius: 28.r,
+                  color: const Color(0xffa963d7))
             ],
             borderRadius: BorderRadius.circular(8),
             gradient: const LinearGradient(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CoustmDropdown extends StatefulWidget {
-  const CoustmDropdown({super.key, this.grades, this.selctedvalue, this.onsave});
+  const CoustmDropdown(
+      {super.key, this.grades, this.selctedvalue, this.onsave});
   final List<String>? grades;
   final String? selctedvalue;
   final void Function(String?)? onsave;
@@ -46,13 +47,13 @@ class _CoustmDropdownState extends State<CoustmDropdown> {
             )),
         validator: (value) {
           if (value == null) {
-            return 'يرجى اختيار عنصر';
+            return 'this feild is requrid';
           }
           return null;
         },
         onChanged: (String? newValue) {
           setState(() {
-            _selectedValue = newValue; // تحديث القيمة المحددة في الـ State
+            _selectedValue = newValue;
           });
         },
         items: grades.map<DropdownMenuItem<String>>((String value) {

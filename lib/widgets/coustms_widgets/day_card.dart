@@ -4,6 +4,7 @@ import 'package:dialymath/screens/groups_screen/group_screen.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoustmCard extends StatelessWidget {
   const CoustmCard(
@@ -21,14 +22,12 @@ class CoustmCard extends StatelessWidget {
       padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
       decoration: BoxDecoration(
         border: BorderDirectional(
-            bottom: BorderSide(width: 2, color: bordercolor),
-            end: BorderSide(width: 0.5, color: bordercolor)),
-        borderRadius: BorderRadius.circular(16),
+            bottom: BorderSide(width: 2.w, color: bordercolor),
+            end: BorderSide(width: 0.5.w, color: bordercolor)),
+        borderRadius: BorderRadius.circular(16.r),
       ),
-      child: GestureDetector(
+      child: InkWell(
         onTap: () {
-          //TODO: fetch all groups of a day before
-          //TODO: navigating to that day page
           BlocProvider.of<GroupCubit>(context).fetchAllGroups(day);
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
@@ -42,15 +41,15 @@ class CoustmCard extends StatelessWidget {
                 title: CoustmText(
                   text: dayname,
                   textcolor: Colors.black,
-                  textsize: 25,
+                  textsize: 25.sp,
                 ),
                 subtitle: const Column(
                   children: [],
                 ),
-                trailing: const CoustmBticon(
+                trailing: CoustmBticon(
                   icon: Icons.calendar_month_outlined,
-                  height: 40,
-                  width: 50,
+                  height: 40.h,
+                  width: 50.w,
                 ))
           ],
         ),

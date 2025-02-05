@@ -1,4 +1,4 @@
-import 'package:dialymath/widgets/coustms_widgets/coustm_card.dart';
+import 'package:dialymath/widgets/coustms_widgets/day_card.dart';
 import 'package:flutter/material.dart';
 
 class Listofgroups extends StatelessWidget {

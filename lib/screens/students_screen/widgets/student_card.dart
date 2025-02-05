@@ -1,12 +1,11 @@
 import 'package:dialymath/models/student_model.dart';
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
+import 'package:dialymath/screens/students_screen/widgets/navigation_bottomsheet.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:dialymath/screens/students_screen/widgets/edit_Student_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Studentcard extends StatelessWidget {
   const Studentcard(
@@ -17,11 +16,8 @@ class Studentcard extends StatelessWidget {
   final Color colorbordertow;
   final StudentModel studentmodel;
   final int day;
-
   @override
   Widget build(BuildContext context) {
-    final Uri whatsapp =
-        Uri.parse('https://wa.me/+02${studentmodel.parentrhone}');
     return Slidable(
       startActionPane: ActionPane(motion: const StretchMotion(), children: [
         SlidableAction(
@@ -69,40 +65,50 @@ class Studentcard extends StatelessWidget {
           },
           child: Column(
             children: [
-              ListTile(
-                title: CoustmText(
-                  text: studentmodel.studentname,
-                  textcolor: Colors.black,
-                  textsize: 25,
-                ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () async {
-                            final Uri uri = Uri(
-                              scheme: 'tel',
-                              path: studentmodel.parentrhone,
-                            );
-                            await launchUrl(uri);
-                          },
-                          icon: const Icon(Icons.call),
-                          color: const Color.fromARGB(255, 17, 34, 184),
-                        ),
-                        Text(studentmodel.parentrhone),
-                      ],
+              Column(
+                children: [
+                  Row(children: [
+                    const CoustmText(
+                      text: 'Name : ',
+                      textcolor: Colors.black,
+                      textsize: 25,
                     ),
-                    IconButton(
-                      onPressed: () {
-                        launchUrl(whatsapp);
-                      },
-                      icon: const FaIcon(FontAwesomeIcons.whatsapp),
-                      color: const Color.fromARGB(255, 21, 124, 44),
+                    CoustmText(
+                      text: studentmodel.studentname,
+                      textcolor: Colors.black,
+                      textsize: 25,
                     )
-                  ],
-                ),
+                  ]),
+                  Row(children: [
+                    const CoustmText(
+                      text: 'Parent phone :',
+                      textcolor: Colors.black,
+                      textsize: 25,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        showModalBottomSheet(
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15)),
+                            ),
+                            context: context,
+                            builder: (context) {
+                              return NavigationBottomsheet(
+                                student: studentmodel,
+                              );
+                            });
+                      },
+                      child: CoustmText(
+                        text: studentmodel.parentrhone,
+                        decoration: TextDecoration.underline,
+                        textcolor: Colors.black,
+                        textsize: 25,
+                      ),
+                    )
+                  ])
+                ],
               ),
             ],
           ),

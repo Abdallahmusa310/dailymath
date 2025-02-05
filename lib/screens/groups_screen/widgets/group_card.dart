@@ -43,9 +43,8 @@ class GroupCard extends StatelessWidget {
             label: 'delet',
             foregroundColor: CupertinoColors.white,
             icon: Icons.delete,
-            onPressed: (context) {
-              group.delete();
-              BlocProvider.of<GroupCubit>(context).fetchAllGroups(day);
+            onPressed: (context) async {
+              await BlocProvider.of<GroupCubit>(context).deleteGroup(group);
             })
       ]),
       child: Container(

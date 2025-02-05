@@ -13,21 +13,15 @@ class AddGroupBottomSheet extends StatefulWidget {
 class _AddGroupBottomSheetState extends State<AddGroupBottomSheet> {
   @override
   Widget build(BuildContext context) {
-    // TODO: Here we removed the bloc provider because
-    // TODO: there is already a provider provided on top of main
     return BlocConsumer<GroupCubit, GroupState>(
       listener: (context, state) {
         switch (state) {
           case GroupFailure():
             print('faield${state.error}');
-
-            //TODO implement toast error
             break;
-
           case GroupSuccess():
             Navigator.pop(context);
             break;
-
           default:
             break;
         }
@@ -49,5 +43,3 @@ class _AddGroupBottomSheetState extends State<AddGroupBottomSheet> {
     );
   }
 }
-
-//                bottom: MediaQuery.of(context).viewInsets.bottom

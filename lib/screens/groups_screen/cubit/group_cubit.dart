@@ -19,23 +19,38 @@ class GroupCubit extends Cubit<GroupState> {
     emit(GroupLoading(state.groups));
     try {
       final groupBox = BoxManager.instance.groupBox;
-      group.id = groupBox.length + 1;
+      // Generate a unique ID by finding the maximum existing ID and adding 1
+      int maxId = 0;
+      for (var existingGroup in groupBox.values) {
+        if (existingGroup.id != null && existingGroup.id! > maxId) {
+          maxId = existingGroup.id!;
+        }
+      }
+      group.id = maxId + 1;
       await groupBox.add(group);
       fetchAllGroups(group.day!);
     } catch (e) {
       emit(GroupFailure(e.toString(), state.groups));
     }
   }
+
+  Future<void> deleteGroup(GroupModel group) async {
+    emit(GroupLoading(state.groups));
+    try {
+      // Delete the group
+      await group.delete();
+      
+      // Delete or update students in the deleted group
+      final studentBox = BoxManager.instance.studentBox;
+      final studentsInGroup = studentBox.values.where((student) => student.idgroup == group.id);
+      
+      for (var student in studentsInGroup) {
+        await student.delete(); // Or update student.idgroup to a special value like -1
+      }
+      
+      fetchAllGroups(group.day!);
+    } catch (e) {
+      emit(GroupFailure(e.toString(), state.groups));
+    }
+  }
 }
- // fetchAllgroups(int day){
-  //   var groupBox = Hive.box<GroupModel>('groupbox');
-  //   groups = groupBox.values.where((item)=>item.day==day).toList();
-  //   emit(GroupSuccess(),)
-  //   ;
-  // }
-  // List<Studentmodel>?students;
-  // fetchAllstudents(){
-  //   var groupBox = Hive.box<GroupModel>('studentbox');
-  //   groups = groupBox.values.toList();
-  //    emit(GroupSuccess());
-  // }
