@@ -14,11 +14,13 @@ class CoustmText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,
-        style: TextStyle(
-          color: textcolor,
-          fontSize: textsize,
-          decoration: decoration,
-        ));
+    return Text(
+      text,
+      style: TextStyle(
+        color: textcolor,
+        fontSize: textsize,
+        decoration: decoration,
+      ),
+    );
   }
 }

@@ -49,6 +49,7 @@ class GroupCard extends StatelessWidget {
       ]),
       child: Container(
         width: double.infinity,
+        constraints: const BoxConstraints(maxWidth: double.infinity),
         padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
         decoration: BoxDecoration(
           border: BorderDirectional(

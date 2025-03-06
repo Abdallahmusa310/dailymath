@@ -5,6 +5,7 @@ import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:dialymath/screens/students_screen/widgets/edit_Student_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class Studentcard extends StatelessWidget {
@@ -44,14 +45,14 @@ class Studentcard extends StatelessWidget {
                 })
       ]),
       child: Container(
-        padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
+        padding: EdgeInsets.only(top: 24.h, bottom: 24.h, left: 16.w),
         decoration: BoxDecoration(
           border: BorderDirectional(
-              bottom: BorderSide(width: 2, color: colorbordertow),
-              end: BorderSide(width: 0.5, color: colorbordertow)),
-          borderRadius: BorderRadius.circular(16),
+              bottom: BorderSide(width: 2.r, color: colorbordertow),
+              end: BorderSide(width: 0.5.r, color: colorbordertow)),
+          borderRadius: BorderRadius.circular(16.r),
         ),
-        child: GestureDetector(
+        child: InkWell(
           onTap: () {
             showModalBottomSheet(
                 isScrollControlled: true,
@@ -68,30 +69,30 @@ class Studentcard extends StatelessWidget {
               Column(
                 children: [
                   Row(children: [
-                    const CoustmText(
+                    CoustmText(
                       text: 'Name : ',
                       textcolor: Colors.black,
-                      textsize: 25,
+                      textsize: 25.sp,
                     ),
                     CoustmText(
                       text: studentmodel.studentname,
                       textcolor: Colors.black,
-                      textsize: 25,
+                      textsize: 25.sp,
                     )
                   ]),
                   Row(children: [
-                    const CoustmText(
-                      text: 'Parent phone :',
+                    CoustmText(
+                      text: 'Parent phone : ',
                       textcolor: Colors.black,
-                      textsize: 25,
+                      textsize: 25.sp,
                     ),
                     InkWell(
                       onTap: () {
                         showModalBottomSheet(
-                            shape: const RoundedRectangleBorder(
+                            shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(15),
-                                  topRight: Radius.circular(15)),
+                                  topLeft: Radius.circular(15.r),
+                                  topRight: Radius.circular(15.r)),
                             ),
                             context: context,
                             builder: (context) {
@@ -104,7 +105,7 @@ class Studentcard extends StatelessWidget {
                         text: studentmodel.parentrhone,
                         decoration: TextDecoration.underline,
                         textcolor: Colors.black,
-                        textsize: 25,
+                        textsize: 25.sp,
                       ),
                     )
                   ])

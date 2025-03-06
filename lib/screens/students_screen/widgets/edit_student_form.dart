@@ -77,7 +77,6 @@ class _EditformState extends State<Editform> {
                           widget.student.save();
                           BlocProvider.of<StudentCubit>(context)
                               .fetchAllstudents(widget.student.idgroup);
-                          Navigator.pop(context);
                         }),
                     const SizedBox(
                       width: 5,

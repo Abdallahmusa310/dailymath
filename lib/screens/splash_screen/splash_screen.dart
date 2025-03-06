@@ -18,8 +18,7 @@ class Splashscreen extends StatelessWidget {
       ),
       nextScreen: const Navbar(),
       splashIconSize: 500,
-      duration: 5,
-      // duration: 3500,
+      duration: 3500,
       centered: true,
     );
   }

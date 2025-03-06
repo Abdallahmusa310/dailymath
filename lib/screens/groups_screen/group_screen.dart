@@ -20,7 +20,6 @@ class Coustmday extends StatefulWidget {
 class _CoustmdayState extends State<Coustmday> {
   @override
   void initState() {
-    //BlocProvider.of<GroupCubit>(context).fetchAllgroups(widget.day);
     super.initState();
   }
 
