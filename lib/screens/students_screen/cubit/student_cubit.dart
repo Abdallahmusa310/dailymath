@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:dialymath/db/BoxManager.dart';
+import 'package:dialymath/db/box_manager.dart';
 import 'package:dialymath/models/student_model.dart';
 import 'package:meta/meta.dart';
 

@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:dialymath/db/BoxManager.dart';
+import 'package:dialymath/db/box_manager.dart';
 import 'package:dialymath/models/group_model.dart';
 import 'package:meta/meta.dart';
 part 'group_state.dart';
@@ -39,15 +39,17 @@ class GroupCubit extends Cubit<GroupState> {
     try {
       // Delete the group
       await group.delete();
-      
+
       // Delete or update students in the deleted group
       final studentBox = BoxManager.instance.studentBox;
-      final studentsInGroup = studentBox.values.where((student) => student.idgroup == group.id);
-      
+      final studentsInGroup =
+          studentBox.values.where((student) => student.idgroup == group.id);
+
       for (var student in studentsInGroup) {
-        await student.delete(); // Or update student.idgroup to a special value like -1
+        await student
+            .delete(); // Or update student.idgroup to a special value like -1
       }
-      
+
       fetchAllGroups(group.day!);
     } catch (e) {
       emit(GroupFailure(e.toString(), state.groups));

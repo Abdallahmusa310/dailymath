@@ -1,4 +1,4 @@
-import 'package:dialymath/db/BoxManager.dart';
+import 'package:dialymath/db/box_manager.dart';
 import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
 import 'package:dialymath/models/group_model.dart';
 import 'package:dialymath/models/student_model.dart';

@@ -21,7 +21,7 @@ class CoustmBt extends StatelessWidget {
               BoxShadow(
                   spreadRadius: -10.r,
                   blurRadius: 28.r,
-                  color: Color(0xffa963d7))
+                  color: const Color(0xffa963d7))
             ],
             borderRadius: BorderRadius.circular(8.r),
             gradient: const LinearGradient(

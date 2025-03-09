@@ -16,8 +16,6 @@ class Editgroupsheet extends StatefulWidget {
 class _EditgroupsheetState extends State<Editgroupsheet> {
   @override
   Widget build(BuildContext context) {
-    // TODO: Here we removed the unneccesary bloc provider
-    //TODO:here we just provided the right cubit
     return BlocConsumer<GroupCubit, GroupState>(
       listener: (context, state) {
         // if (state is AddgroupFailure) {
