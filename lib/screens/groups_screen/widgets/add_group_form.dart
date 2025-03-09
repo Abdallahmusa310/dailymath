@@ -16,7 +16,7 @@ class AddGroupForm extends StatefulWidget {
 class _AddGroupFormState extends State<AddGroupForm> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   final GlobalKey<FormState> formKey = GlobalKey();
-  String? name, grade, time;
+  String? name, grade, time, grouplink;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<GroupCubit, GroupState>(
@@ -58,6 +58,15 @@ class _AddGroupFormState extends State<AddGroupForm> {
                     const SizedBox(
                       height: 20,
                     ),
+                    CoustmTextfield(
+                      hinttext: 'whatsapp group link',
+                      onsave: (value) {
+                        grouplink = value;
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +81,8 @@ class _AddGroupFormState extends State<AddGroupForm> {
                                   groupname: name!,
                                   groupgrade: grade!,
                                   grouptime: time!,
-                                  day: widget.day);
+                                  day: widget.day,
+                                  grouplink: grouplink!);
                               BlocProvider.of<GroupCubit>(context)
                                   .addGroup(groupmodel);
                             } else {

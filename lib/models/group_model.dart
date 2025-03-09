@@ -25,15 +25,18 @@ class GroupModel extends HiveObject {
   int? id;
 
   // Add this field to store the auto-generated group ID.
+  @HiveField(7)
+  String? grouplink;
 
-  GroupModel({
-    this.groupname,
-    this.groupgrade,
-    this.grouptime,
-    this.studentname,
-    this.parentphone,
-    this.day,
-    this.id,
-    // Include the groupid in the constructor.
-  });
+  GroupModel(
+      {this.groupname,
+      this.groupgrade,
+      this.grouptime,
+      this.studentname,
+      this.parentphone,
+      this.day,
+      this.id,
+      this.grouplink
+      // Include the groupid in the constructor.
+      });
 }

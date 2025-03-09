@@ -1,0 +1,2 @@
+C:/My projects/dailymath/android/app/.cxx/RelWithDebInfo/2v3y5v25/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/My projects/dailymath/android/app/.cxx/RelWithDebInfo/2v3y5v25/armeabi-v7a/CMakeFiles/rebuild_cache.dir

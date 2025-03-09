@@ -8,6 +8,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GroupCard extends StatelessWidget {
   const GroupCard({
@@ -22,6 +24,7 @@ class GroupCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Uri whatsapp = Uri.parse(group.grouplink!);
     return Slidable(
       startActionPane: ActionPane(motion: const StretchMotion(), children: [
         SlidableAction(
@@ -90,6 +93,23 @@ class GroupCard extends StatelessWidget {
                         text: 'start at : ${group.grouptime}',
                         textcolor: Colors.black,
                         textsize: 16,
+                      ),
+                      Row(
+                        children: [
+                          const CoustmText(
+                            text: 'whatsapp group : ',
+                            textcolor: Colors.black,
+                            textsize: 16,
+                          ),
+                          InkWell(
+                              onTap: () async {
+                                await launchUrl(whatsapp);
+                              },
+                              child: const FaIcon(
+                                FontAwesomeIcons.whatsapp,
+                                color: Colors.green,
+                              )),
+                        ],
                       ),
                     ],
                   ),

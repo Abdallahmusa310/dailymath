@@ -1,0 +1,2 @@
+C:/My projects/dailymath/android/app/.cxx/Debug/c7374b4y/x86/CMakeFiles/edit_cache.dir
+C:/My projects/dailymath/android/app/.cxx/Debug/c7374b4y/x86/CMakeFiles/rebuild_cache.dir

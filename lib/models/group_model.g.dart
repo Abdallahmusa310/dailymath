@@ -24,13 +24,14 @@ class GroupModelAdapter extends TypeAdapter<GroupModel> {
       parentphone: fields[4] as String?,
       day: fields[5] as int?,
       id: fields[6] as int?,
+      grouplink: fields[7] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, GroupModel obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(8)
       ..writeByte(0)
       ..write(obj.groupname)
       ..writeByte(1)
@@ -44,7 +45,9 @@ class GroupModelAdapter extends TypeAdapter<GroupModel> {
       ..writeByte(5)
       ..write(obj.day)
       ..writeByte(6)
-      ..write(obj.id);
+      ..write(obj.id)
+      ..writeByte(7)
+      ..write(obj.grouplink);
   }
 
   @override

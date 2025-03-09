@@ -17,6 +17,7 @@ class CoustmText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
+        overflow: TextOverflow.ellipsis,
         color: textcolor,
         fontSize: textsize,
         decoration: decoration,
