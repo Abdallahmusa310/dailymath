@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/models/student_model.dart';
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/screens/students_screen/widgets/navigation_bottomsheet.dart';
@@ -22,7 +23,7 @@ class Studentcard extends StatelessWidget {
     return Slidable(
       startActionPane: ActionPane(motion: const StretchMotion(), children: [
         SlidableAction(
-            backgroundColor: const Color.fromARGB(255, 65, 33, 243),
+            backgroundColor: Appcolors.purble,
             label: 'edit',
             icon: Icons.edit,
             onPressed: (context) => showModalBottomSheet(
@@ -35,7 +36,7 @@ class Studentcard extends StatelessWidget {
                   );
                 })),
         SlidableAction(
-            backgroundColor: const Color.fromARGB(255, 223, 28, 28),
+            backgroundColor: Appcolors.red,
             label: 'delet',
             icon: Icons.delete,
             onPressed: (context) => {
@@ -69,43 +70,68 @@ class Studentcard extends StatelessWidget {
               Column(
                 children: [
                   Row(children: [
-                    CoustmText(
-                      text: 'Name : ',
-                      textcolor: Colors.black,
-                      textsize: 25.sp,
+                    Expanded(
+                      child: CoustmText(
+                        text: 'Name : ',
+                        textcolor: Appcolors.balck,
+                        textsize: 25.sp,
+                      ),
                     ),
-                    CoustmText(
-                      text: studentmodel.studentname,
-                      textcolor: Colors.black,
-                      textsize: 25.sp,
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          showModalBottomSheet(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(15.r),
+                                    topRight: Radius.circular(15.r)),
+                              ),
+                              context: context,
+                              builder: (context) {
+                                return NavigationBottomsheet(
+                                  student: studentmodel,
+                                );
+                              });
+                        },
+                        child: CoustmText(
+                          text: studentmodel.studentname,
+                          decoration: TextDecoration.underline,
+                          textcolor: Appcolors.balck,
+                          textsize: 25.sp,
+                        ),
+                      ),
                     )
                   ]),
                   Row(children: [
-                    CoustmText(
-                      text: 'Parent phone : ',
-                      textcolor: Colors.black,
-                      textsize: 25.sp,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        showModalBottomSheet(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(15.r),
-                                  topRight: Radius.circular(15.r)),
-                            ),
-                            context: context,
-                            builder: (context) {
-                              return NavigationBottomsheet(
-                                student: studentmodel,
-                              );
-                            });
-                      },
+                    Expanded(
                       child: CoustmText(
-                        text: studentmodel.parentrhone,
-                        decoration: TextDecoration.underline,
-                        textcolor: Colors.black,
+                        text: 'Parent phone : ',
+                        textcolor: Appcolors.balck,
                         textsize: 25.sp,
+                      ),
+                    ),
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          showModalBottomSheet(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(15.r),
+                                    topRight: Radius.circular(15.r)),
+                              ),
+                              context: context,
+                              builder: (context) {
+                                return NavigationBottomsheet(
+                                  student: studentmodel,
+                                );
+                              });
+                        },
+                        child: CoustmText(
+                          text: studentmodel.parentrhone,
+                          decoration: TextDecoration.underline,
+                          textcolor: Appcolors.balck,
+                          textsize: 25.sp,
+                        ),
                       ),
                     )
                   ])

@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/models/student_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,6 +16,7 @@ class NavigationBottomsheet extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          Text(student.studentname),
           IconButton(
             onPressed: () async {
               final Uri uri = Uri(
@@ -27,7 +29,7 @@ class NavigationBottomsheet extends StatelessWidget {
               const Icon(Icons.call),
               Text('  : ${student.parentrhone}')
             ]),
-            color: const Color.fromARGB(255, 17, 34, 184),
+            color: Appcolors.purble,
           ),
           IconButton(
             onPressed: () async {
@@ -36,11 +38,11 @@ class NavigationBottomsheet extends StatelessWidget {
             icon: Row(children: [
               const FaIcon(
                 FontAwesomeIcons.whatsapp,
-                color: Colors.green,
+                color: Appcolors.green,
               ),
               Text('  : ${student.parentrhone}')
             ]),
-            color: const Color.fromARGB(255, 17, 34, 184),
+            color: Appcolors.purble,
           ),
         ],
       ),

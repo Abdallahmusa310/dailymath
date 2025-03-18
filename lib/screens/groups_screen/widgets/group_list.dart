@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
 import 'package:dialymath/models/group_model.dart';
 import 'package:dialymath/screens/groups_screen/widgets/group_card.dart';
@@ -31,7 +32,7 @@ class _GrouplistState extends State<Grouplist> {
                 return GroupCard(
                   day: widget.day,
                   group: state.groups![index],
-                  colorborder: const Color.fromARGB(255, 57, 13, 179),
+                  colorborder: Appcolors.purble,
                 );
               }),
         );

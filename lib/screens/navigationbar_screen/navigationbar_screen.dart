@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dialymath/screens/home_screen/home_screen.dart';
 import 'package:dialymath/screens/menu_screen/menu_screen.dart';
 import 'package:dialymath/screens/setting_screen/setting_screen.dart';
+import 'package:dialymath/widgets/coustms_widgets/build_gradint_icon.dart';
 import 'package:flutter/material.dart';
 
 class Navbar extends StatefulWidget {
@@ -27,10 +28,10 @@ class _NavbarState extends State<Navbar> {
         backgroundColor: Colors.transparent,
         color: Color.fromARGB((255 * 0.1).round(), 110, 74, 74),
         animationDuration: const Duration(milliseconds: 300),
-        items: const [
-          Icon(Icons.settings, color: Color.fromARGB(255, 53, 39, 176)),
-          Icon(Icons.home, color: Color.fromARGB(255, 53, 39, 176)),
-          Icon(Icons.menu, color: Color.fromARGB(255, 53, 39, 176))
+        items: [
+          buildGradientIcon(Icons.settings),
+          buildGradientIcon(Icons.home),
+          buildGradientIcon(Icons.menu),
         ],
         onTap: (i) {
           setState(() {

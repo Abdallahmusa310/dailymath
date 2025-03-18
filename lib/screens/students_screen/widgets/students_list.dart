@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/screens/students_screen/widgets/student_card.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class _StudentlistState extends State<Studentlist> {
                     return Studentcard(
                       day: widget.day,
                       studentmodel: students[index],
-                      colorbordertow: const Color.fromARGB(255, 57, 13, 179),
+                      colorbordertow: Appcolors.purble,
                     );
                   });
             },

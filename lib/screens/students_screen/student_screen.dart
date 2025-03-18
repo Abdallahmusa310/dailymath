@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/screens/students_screen/widgets/student_sheet.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
@@ -60,7 +61,7 @@ class _StudentscreenState extends State<Studentscreen> {
                     icon: const Icon(Icons.exit_to_app)),
                 CoustmText(
                   text: widget.groupname,
-                  textcolor: Colors.black,
+                  textcolor: Appcolors.balck,
                   textsize: 25,
                 ),
               ],

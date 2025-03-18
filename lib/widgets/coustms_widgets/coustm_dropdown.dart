@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:flutter/material.dart';
 
 class CoustmDropdown extends StatefulWidget {
@@ -40,7 +41,9 @@ class _CoustmDropdownState extends State<CoustmDropdown> {
         decoration: const InputDecoration(
             labelText: 'grade',
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color.fromARGB(255, 20, 75, 121)),
+                borderSide: BorderSide(
+                  color: Appcolors.purble,
+                ),
                 borderRadius: BorderRadius.all(Radius.circular(12))),
             border: OutlineInputBorder(
               borderSide: BorderSide(),

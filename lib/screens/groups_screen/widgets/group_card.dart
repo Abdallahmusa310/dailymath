@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
 import 'package:dialymath/models/group_model.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
@@ -28,9 +29,9 @@ class GroupCard extends StatelessWidget {
     return Slidable(
       startActionPane: ActionPane(motion: const StretchMotion(), children: [
         SlidableAction(
-            backgroundColor: const Color.fromARGB(255, 65, 33, 243),
+            backgroundColor: Appcolors.purble,
             label: 'edit',
-            foregroundColor: CupertinoColors.white,
+            foregroundColor: Appcolors.white,
             icon: Icons.edit,
             onPressed: (context) => showModalBottomSheet(
                 isScrollControlled: true,
@@ -42,9 +43,9 @@ class GroupCard extends StatelessWidget {
                   );
                 })),
         SlidableAction(
-            backgroundColor: const Color.fromARGB(255, 223, 28, 28),
+            backgroundColor: Appcolors.red,
             label: 'delet',
-            foregroundColor: CupertinoColors.white,
+            foregroundColor: Appcolors.white,
             icon: Icons.delete,
             onPressed: (context) async {
               await BlocProvider.of<GroupCubit>(context).deleteGroup(group);
@@ -78,7 +79,7 @@ class GroupCard extends StatelessWidget {
               ListTile(
                   title: CoustmText(
                     text: group.groupname ?? '',
-                    textcolor: Colors.black,
+                    textcolor: Appcolors.balck,
                     textsize: 25,
                   ),
                   subtitle: Column(
@@ -86,19 +87,19 @@ class GroupCard extends StatelessWidget {
                     children: [
                       CoustmText(
                         text: '${group.groupgrade}',
-                        textcolor: Colors.black,
+                        textcolor: Appcolors.balck,
                         textsize: 16,
                       ),
                       CoustmText(
                         text: 'start at : ${group.grouptime}',
-                        textcolor: Colors.black,
+                        textcolor: Appcolors.balck,
                         textsize: 16,
                       ),
                       Row(
                         children: [
                           const CoustmText(
                             text: 'whatsapp group : ',
-                            textcolor: Colors.black,
+                            textcolor: Appcolors.balck,
                             textsize: 16,
                           ),
                           InkWell(
@@ -107,7 +108,7 @@ class GroupCard extends StatelessWidget {
                               },
                               child: const FaIcon(
                                 FontAwesomeIcons.whatsapp,
-                                color: Colors.green,
+                                color: Appcolors.green,
                               )),
                         ],
                       ),

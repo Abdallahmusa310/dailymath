@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
 import 'package:dialymath/screens/groups_screen/widgets/add_group_bottom_sheet.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
@@ -54,7 +55,7 @@ class _CoustmdayState extends State<Coustmday> {
                     icon: const Icon(Icons.exit_to_app)),
                 CoustmText(
                   text: widget.dayname,
-                  textcolor: Colors.black,
+                  textcolor: Appcolors.balck,
                   textsize: 25,
                 ),
               ],

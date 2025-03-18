@@ -1,3 +1,4 @@
+import 'package:dialymath/constans/colors.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,24 +20,25 @@ class CoustmBt extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  spreadRadius: -10.r,
-                  blurRadius: 28.r,
-                  color: const Color(0xffa963d7))
+                spreadRadius: -10.r,
+                blurRadius: 28.r,
+                color: Appcolors.waithepurbe,
+              )
             ],
             borderRadius: BorderRadius.circular(8.r),
-            gradient: const LinearGradient(
-                colors: [Color(0xff407bff), Color(0xff9467dd)])),
+            gradient: const LinearGradient(colors: [
+              Appcolors.waitheblue,
+              Appcolors.waithepurbe,
+            ])),
         child: Center(
             child: isload
                 ? SizedBox(
                     width: 20.w,
                     height: 20.h,
                     child: const CircularProgressIndicator(
-                      strokeWidth: 2.5,
-                      color: Colors.white,
-                    ))
+                        strokeWidth: 2.5, color: Appcolors.white))
                 : CoustmText(
-                    text: bttext, textsize: 15, textcolor: Colors.white)),
+                    text: bttext, textsize: 15, textcolor: Appcolors.white)),
       ),
     );
   }
@@ -55,24 +57,24 @@ class CoustmBticon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: height,
-        width: width,
+        height: height.h,
+        width: width.w,
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
                   spreadRadius: -10.r,
                   blurRadius: 28.r,
-                  color: const Color(0xffa963d7))
+                  color: Appcolors.waithepurbe)
             ],
             borderRadius: BorderRadius.circular(8),
             gradient: const LinearGradient(
-                colors: [Color(0xff407bff), Color(0xff9467dd)])),
+                colors: [Appcolors.waitheblue, Appcolors.waithepurbe])),
         child: Center(
           child: IconButton(
             onPressed: ontab,
             icon: Icon(
               icon,
-              color: Colors.white,
+              color: Appcolors.white,
             ),
           ),
         ));
