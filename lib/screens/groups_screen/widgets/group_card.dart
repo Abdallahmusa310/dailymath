@@ -51,16 +51,8 @@ class GroupCard extends StatelessWidget {
               await BlocProvider.of<GroupCubit>(context).deleteGroup(group);
             })
       ]),
-      child: Container(
-        width: double.infinity,
-        constraints: const BoxConstraints(maxWidth: double.infinity),
-        padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
-        decoration: BoxDecoration(
-          border: BorderDirectional(
-              bottom: BorderSide(width: 2, color: colorborder),
-              end: BorderSide(width: 0.5, color: colorborder)),
-          borderRadius: BorderRadius.circular(16),
-        ),
+      child: Card(
+        elevation: 6,
         child: GestureDetector(
           onTap: () {
             showModalBottomSheet(

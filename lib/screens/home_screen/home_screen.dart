@@ -1,4 +1,4 @@
-import 'package:dialymath/screens/home_screen/widgets/listofgroups.dart';
+import 'package:dialymath/screens/home_screen/widgets/listofdays.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,8 +16,8 @@ class HomeScreen extends StatelessWidget {
             children: [
               Image.asset(
                 'assets/p2.png',
-                width: 50.w,
-                height: 50.h,
+                height: 20,
+                width: 20,
               ),
               Text(
                 ' Daily Math',
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          const Expanded(child: Listofgroups())
+          const Expanded(child: ListofDays())
         ],
       ),
     ));

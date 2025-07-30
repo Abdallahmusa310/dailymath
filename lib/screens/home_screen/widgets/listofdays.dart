@@ -2,14 +2,14 @@ import 'package:dialymath/widgets/coustms_widgets/day_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Listofgroups extends StatefulWidget {
-  const Listofgroups({super.key});
+class ListofDays extends StatefulWidget {
+  const ListofDays({super.key});
 
   @override
-  State<Listofgroups> createState() => _ListofgroupsState();
+  State<ListofDays> createState() => _ListofDaysState();
 }
 
-class _ListofgroupsState extends State<Listofgroups> {
+class _ListofDaysState extends State<ListofDays> {
   final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
   final List<Map<String, dynamic>> _days = [
     {'dayname': 'Saturday', 'day': 1},
@@ -30,7 +30,7 @@ class _ListofgroupsState extends State<Listofgroups> {
 
   void _addItemsWithAnimation() async {
     for (int i = 0; i < _days.length; i++) {
-      await Future.delayed(const Duration(milliseconds: 600));
+      await Future.delayed(const Duration(milliseconds: 500));
       _visibleDays.add(_days[i]);
       _listKey.currentState?.insertItem(i);
     }
@@ -39,14 +39,14 @@ class _ListofgroupsState extends State<Listofgroups> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 28.w, right: 28.w, bottom: 8.h),
+      padding: EdgeInsets.only(left: 28.w, right: 28.w, bottom: 8),
       child: AnimatedList(
         key: _listKey,
         physics: const BouncingScrollPhysics(),
         initialItemCount: _visibleDays.length,
         itemBuilder: (context, index, animation) {
           return Padding(
-            padding: const EdgeInsets.only(bottom: 30),
+            padding: const EdgeInsets.only(bottom: 8),
             child: SlideTransition(
               position: animation.drive(
                 Tween<Offset>(

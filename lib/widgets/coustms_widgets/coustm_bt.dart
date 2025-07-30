@@ -20,9 +20,9 @@ class CoustmBt extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                spreadRadius: -10.r,
-                blurRadius: 28.r,
-                color: Appcolors.waithepurbe,
+                spreadRadius: -15.r,
+                blurRadius: 80.r,
+                color: const Color.fromARGB(255, 0, 0, 0),
               )
             ],
             borderRadius: BorderRadius.circular(8.r),
@@ -64,7 +64,7 @@ class CoustmBticon extends StatelessWidget {
               BoxShadow(
                   spreadRadius: -10.r,
                   blurRadius: 28.r,
-                  color: Appcolors.waithepurbe)
+                  color: const Color.fromARGB(255, 0, 0, 0))
             ],
             borderRadius: BorderRadius.circular(8),
             gradient: const LinearGradient(
