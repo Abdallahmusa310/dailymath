@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:dialymath/db/box_manager.dart';
-import 'package:dialymath/models/student_model.dart';
+
 import 'package:meta/meta.dart';
+import 'package:nahj/db/box_manager.dart';
+import 'package:nahj/models/student_model.dart' show StudentModel;
 
 part 'student_state.dart';
 

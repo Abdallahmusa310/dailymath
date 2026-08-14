@@ -1,8 +1,8 @@
-import 'package:dialymath/constans/colors.dart';
-import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
-import 'package:dialymath/screens/students_screen/widgets/student_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/screens/students_screen/cubit/student_cubit.dart';
+import 'package:nahj/screens/students_screen/widgets/student_card.dart';
 
 class Studentlist extends StatefulWidget {
   const Studentlist({

@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:dialymath/db/box_manager.dart';
-import 'package:dialymath/models/group_model.dart';
+import '/db/box_manager.dart';
+import '/models/group_model.dart';
 import 'package:meta/meta.dart';
 part 'group_state.dart';
 

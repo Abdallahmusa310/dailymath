@@ -1,5 +1,5 @@
-import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/models/student_model.dart';
+import '/models/group_model.dart';
+import '/models/student_model.dart';
 import 'package:hive/hive.dart';
 
 class BoxManager {

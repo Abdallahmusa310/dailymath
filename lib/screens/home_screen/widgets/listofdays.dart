@@ -1,4 +1,4 @@
-import 'package:dialymath/widgets/coustms_widgets/day_card.dart';
+import 'package:nahj/widgets/coustms_widgets/day_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

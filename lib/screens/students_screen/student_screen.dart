@@ -1,11 +1,12 @@
-import 'package:dialymath/constans/colors.dart';
-import 'package:dialymath/screens/students_screen/widgets/student_sheet.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
-import 'package:dialymath/screens/students_screen/widgets/students_list.dart';
+import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/screens/students_screen/cubit/student_cubit.dart'
+    show StudentCubit, AddStudentSuccess, StudentState;
+import 'package:nahj/screens/students_screen/widgets/student_sheet.dart';
+import 'package:nahj/screens/students_screen/widgets/students_list.dart';
+import 'package:nahj/widgets/coustms_widgets/coustm_bt.dart';
+import 'package:nahj/widgets/coustms_widgets/coustm_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 
 class Studentscreen extends StatefulWidget {
   const Studentscreen.studentscreen({

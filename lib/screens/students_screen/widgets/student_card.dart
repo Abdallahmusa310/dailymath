@@ -1,13 +1,15 @@
-import 'package:dialymath/constans/colors.dart';
-import 'package:dialymath/models/student_model.dart';
-import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
-import 'package:dialymath/screens/students_screen/widgets/navigation_bottomsheet.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
-import 'package:dialymath/screens/students_screen/widgets/edit_student_sheet.dart';
+import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/screens/students_screen/cubit/student_cubit.dart';
+import 'package:nahj/widgets/coustms_widgets/coustm_text.dart';
+
+import '/models/student_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import '/screens/students_screen/widgets/edit_student_sheet.dart';
+import '/screens/students_screen/widgets/navigation_bottomsheet.dart';
 
 class Studentcard extends StatelessWidget {
   const Studentcard(

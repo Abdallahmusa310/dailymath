@@ -1,7 +1,7 @@
-import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
-import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_textfield.dart';
+import '/screens/groups_screen/cubit/group_cubit.dart';
+import '/models/group_model.dart';
+import '/widgets/coustms_widgets/coustm_bt.dart';
+import '/widgets/coustms_widgets/coustm_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

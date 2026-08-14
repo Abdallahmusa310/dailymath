@@ -1,7 +1,7 @@
-import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
-import 'package:dialymath/screens/students_screen/widgets/student_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nahj/screens/students_screen/cubit/student_cubit.dart';
+import 'package:nahj/screens/students_screen/widgets/student_form.dart';
 
 class StudentSheet extends StatefulWidget {
   const StudentSheet({

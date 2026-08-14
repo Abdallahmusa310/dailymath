@@ -1,4 +1,4 @@
-import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
+import 'package:nahj/widgets/coustms_widgets/coustm_bt.dart';
 import 'package:flutter/material.dart';
 
 class Setting extends StatelessWidget {

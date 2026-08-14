@@ -1,8 +1,8 @@
-import 'package:dialymath/constans/colors.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
-import 'package:dialymath/screens/groups_screen/widgets/add_group_bottom_sheet.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
-import 'package:dialymath/screens/groups_screen/widgets/group_list.dart';
+import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/screens/groups_screen/widgets/add_group_bottom_sheet.dart';
+import 'package:nahj/screens/groups_screen/widgets/group_list.dart';
+import 'package:nahj/widgets/coustms_widgets/coustm_bt.dart';
+import 'package:nahj/widgets/coustms_widgets/coustm_text.dart';
 import 'package:flutter/material.dart';
 
 class Coustmday extends StatefulWidget {

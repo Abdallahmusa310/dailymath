@@ -1,10 +1,10 @@
-import 'package:dialymath/db/box_manager.dart';
-import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
-import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/models/student_model.dart';
-import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
-import 'package:dialymath/simple_bloc_observer.dart';
-import 'package:dialymath/screens/splash_screen/splash_screen.dart';
+import '/screens/students_screen/cubit/student_cubit.dart';
+import '/db/box_manager.dart';
+import '/screens/groups_screen/cubit/group_cubit.dart';
+import '/models/group_model.dart';
+import '/models/student_model.dart';
+import '/simple_bloc_observer.dart';
+import '/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

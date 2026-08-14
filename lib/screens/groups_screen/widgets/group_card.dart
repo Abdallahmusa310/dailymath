@@ -1,10 +1,11 @@
-import 'package:dialymath/constans/colors.dart';
-import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
-import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
-import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
-import 'package:dialymath/screens/groups_screen/widgets/edit_groupsheet.dart';
-import 'package:dialymath/screens/students_screen/student_screen.dart';
+import 'package:nahj/core/app_colors/app_colors.dart';
+
+import '/screens/groups_screen/cubit/group_cubit.dart';
+import '/models/group_model.dart';
+import '/widgets/coustms_widgets/coustm_bt.dart';
+import '/widgets/coustms_widgets/coustm_text.dart';
+import '/screens/groups_screen/widgets/edit_groupsheet.dart';
+import '/screens/students_screen/student_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

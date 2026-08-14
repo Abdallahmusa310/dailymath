@@ -1,9 +1,10 @@
-import 'package:dialymath/constans/colors.dart';
-import 'package:dialymath/screens/groups_screen/cubit/group_cubit.dart';
-import 'package:dialymath/models/group_model.dart';
-import 'package:dialymath/screens/groups_screen/widgets/group_card.dart';
+import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/models/group_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nahj/screens/groups_screen/cubit/group_cubit.dart';
+import 'package:nahj/screens/groups_screen/widgets/group_card.dart';
 
 class Grouplist extends StatefulWidget {
   const Grouplist({

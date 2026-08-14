@@ -1,8 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:dialymath/screens/home_screen/home_screen.dart';
-import 'package:dialymath/screens/menu_screen/menu_screen.dart';
-import 'package:dialymath/screens/setting_screen/setting_screen.dart';
-import 'package:dialymath/widgets/coustms_widgets/build_gradint_icon.dart';
+import 'package:nahj/screens/home_screen/home_screen.dart';
+import 'package:nahj/screens/menu_screen/menu_screen.dart';
+import 'package:nahj/screens/setting_screen/setting_screen.dart';
+import 'package:nahj/widgets/coustms_widgets/build_gradint_icon.dart';
 import 'package:flutter/material.dart';
 
 class Navbar extends StatefulWidget {
