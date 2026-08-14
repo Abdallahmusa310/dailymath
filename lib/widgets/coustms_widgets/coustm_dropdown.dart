@@ -1,4 +1,4 @@
-import 'package:dialymath/constans/colors.dart';
+import 'package:dialymath/core/colors/colors.dart';
 import 'package:flutter/material.dart';
 
 class CoustmDropdown extends StatefulWidget {

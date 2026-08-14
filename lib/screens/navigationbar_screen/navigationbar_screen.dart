@@ -15,7 +15,7 @@ class Navbar extends StatefulWidget {
 class _NavbarState extends State<Navbar> {
   int slectedindex = 1;
   List<Widget> screens = [
-    const Setting(),
+    const Settingscreen(),
     const HomeScreen(),
     const Menu(),
   ];

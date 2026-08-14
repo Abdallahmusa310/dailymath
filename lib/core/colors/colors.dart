@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Appcolors {
+  static const Color primaryColor = Color(0xFF085041);
+  static const Color textcolor = Color(0xFF444441);
+  static const Color alertColor = Color(0xFF712B13);
+  static const Color warningColor = Color(0xFF633806);
   static const balck = Color.fromARGB(255, 0, 0, 0);
   static const white = Color.fromARGB(255, 255, 255, 255);
   static const purble = Color.fromARGB(255, 79, 33, 243);

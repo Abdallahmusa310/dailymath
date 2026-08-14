@@ -1,4 +1,4 @@
-import 'package:dialymath/constans/colors.dart';
+import 'package:dialymath/core/colors/colors.dart';
 import 'package:dialymath/models/student_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

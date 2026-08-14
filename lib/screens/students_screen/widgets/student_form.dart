@@ -1,3 +1,5 @@
+import 'package:dialymath/notification/notification_orgnaizer.dart';
+import 'package:dialymath/notification/notifucations.dart';
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/models/student_model.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
@@ -73,6 +75,14 @@ class _StudentFormState extends State<StudentForm> {
                                       idgroup: widget.groupId);
                                   BlocProvider.of<StudentCubit>(context)
                                       .addstudent(studentmodel);
+                                  NotificationSettingsHelper
+                                          .getNotificationsEnabled()
+                                      .then((enabled) {
+                                    if (enabled) {
+                                      Notofocation().basicnotofication(
+                                          'تهانينا!', 'تم إضافة الجروب $name');
+                                    }
+                                  });
                                 } else {
                                   autovalidateMode = AutovalidateMode.always;
                                   setState(() {});

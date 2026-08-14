@@ -1,4 +1,4 @@
-import 'package:dialymath/constans/colors.dart';
+import 'package:dialymath/core/colors/colors.dart';
 import 'package:dialymath/models/student_model.dart';
 import 'package:dialymath/screens/students_screen/cubit/student_cubit.dart';
 import 'package:dialymath/screens/students_screen/widgets/navigation_bottomsheet.dart';

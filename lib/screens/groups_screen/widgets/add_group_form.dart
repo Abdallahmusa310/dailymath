@@ -5,9 +5,11 @@ import 'package:dialymath/widgets/coustms_widgets/coustm_dropdown.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:dialymath/notification/notifucations.dart';
 
 class AddGroupForm extends StatefulWidget {
-  const AddGroupForm({super.key, required this.day});
+  const AddGroupForm({super.key, required this.day, this.group});
+  final GroupModel? group;
   final int day;
   @override
   State<AddGroupForm> createState() => _AddGroupFormState();
@@ -85,6 +87,8 @@ class _AddGroupFormState extends State<AddGroupForm> {
                                   grouplink: grouplink!);
                               BlocProvider.of<GroupCubit>(context)
                                   .addGroup(groupmodel);
+                              Notofocation().basicnotofication(
+                                  'تهانينا!', '   تم اضافه المجموعه');
                             } else {
                               autovalidateMode = AutovalidateMode.always;
                               setState(() {});

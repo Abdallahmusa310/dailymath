@@ -11,14 +11,6 @@
                 "--web-port=8080"
             ]
         },
-        {
-            "name": "Run on Android Device",
-            "request": "launch",
-            "type": "dart",
-            "args": [
-                "-d",
-                "b0a14512"
-            ]
-        }
+        
     ]
 }

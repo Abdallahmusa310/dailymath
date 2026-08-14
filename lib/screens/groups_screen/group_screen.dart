@@ -1,4 +1,4 @@
-import 'package:dialymath/constans/colors.dart';
+import 'package:dialymath/core/colors/colors.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_bt.dart';
 import 'package:dialymath/screens/groups_screen/widgets/add_group_bottom_sheet.dart';
 import 'package:dialymath/widgets/coustms_widgets/coustm_text.dart';
