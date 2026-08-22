@@ -1,4 +1,4 @@
-import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 import 'package:nahj/models/group_model.dart';
 
 import 'package:flutter/material.dart';

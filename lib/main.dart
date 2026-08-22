@@ -4,7 +4,7 @@ import '/screens/groups_screen/cubit/group_cubit.dart';
 import '/models/group_model.dart';
 import '/models/student_model.dart';
 import '/simple_bloc_observer.dart';
-import '/screens/splash_screen/splash_screen.dart';
+import 'features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,11 +16,11 @@ void main() async {
   Hive.registerAdapter(GroupModelAdapter());
   Hive.registerAdapter(StudentModelAdapter());
   await BoxManager.instance.initialize();
-  runApp(const Dialymath());
+  runApp(const Nahj());
 }
 
-class Dialymath extends StatelessWidget {
-  const Dialymath({super.key});
+class Nahj extends StatelessWidget {
+  const Nahj({super.key});
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(

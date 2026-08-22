@@ -5,35 +5,20 @@ part 'group_model.g.dart';
 class GroupModel extends HiveObject {
   @HiveField(0)
   String? groupname;
-
   @HiveField(1)
   String? groupgrade;
-
   @HiveField(2)
   String? grouptime;
-
   @HiveField(3)
-  String? studentname;
-
-  @HiveField(4)
-  String? parentphone;
-
-  @HiveField(5)
   int? day;
-
-  @HiveField(6)
+  @HiveField(4)
   int? id;
-
-  // Add this field to store the auto-generated group ID.
-  @HiveField(7)
+  @HiveField(5)
   String? grouplink;
-
   GroupModel(
       {this.groupname,
       this.groupgrade,
       this.grouptime,
-      this.studentname,
-      this.parentphone,
       this.day,
       this.id,
       this.grouplink

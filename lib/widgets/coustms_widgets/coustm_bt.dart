@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 import 'package:nahj/widgets/coustms_widgets/coustm_text.dart';
 
 class CoustmBt extends StatelessWidget {

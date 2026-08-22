@@ -1,4 +1,4 @@
-import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 
 import '/screens/groups_screen/cubit/group_cubit.dart';
 import '/models/group_model.dart';

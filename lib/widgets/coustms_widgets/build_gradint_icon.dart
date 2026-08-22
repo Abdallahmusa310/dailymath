@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 
 Widget buildGradientIcon(IconData icon) {
   return ShaderMask(

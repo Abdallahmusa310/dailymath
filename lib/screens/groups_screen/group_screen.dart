@@ -1,4 +1,4 @@
-import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 import 'package:nahj/screens/groups_screen/widgets/add_group_bottom_sheet.dart';
 import 'package:nahj/screens/groups_screen/widgets/group_list.dart';
 import 'package:nahj/widgets/coustms_widgets/coustm_bt.dart';

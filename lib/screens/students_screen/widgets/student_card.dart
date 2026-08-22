@@ -1,4 +1,4 @@
-import 'package:nahj/core/app_colors/app_colors.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 import 'package:nahj/screens/students_screen/cubit/student_cubit.dart';
 import 'package:nahj/widgets/coustms_widgets/coustm_text.dart';
 
