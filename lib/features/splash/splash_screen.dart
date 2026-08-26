@@ -1,25 +1,60 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:lottie/lottie.dart';
-import 'package:nahj/screens/navigationbar_screen/navigationbar_screen.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:nahj/core/colors/app_colors.dart';
 
-class Splashscreen extends StatelessWidget {
+class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
   @override
+  State<Splashscreen> createState() => _SplashscreenState();
+}
+
+class _SplashscreenState extends State<Splashscreen> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer(const Duration(seconds: 3), _goToChooseAccountType);
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel(); // مهم جداً - لو المستخدم قفل الشاشة قبل ما التايمر يخلص
+    super.dispose();
+  }
+
+  void _goToChooseAccountType() {
+    if (!mounted) return;
+    context.go('/ChooseAccountScreen');
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-      splash: Column(
-        children: [
-          Center(
-              child:
-                  LottieBuilder.asset('assets/Animation - 1724422585602.json'))
-        ],
+    return Scaffold(
+      backgroundColor: const Color(0xff12977c),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              'assets/images/svg/nahj_logo.svg',
+              width: 200,
+              height: 200,
+            ),
+            const Text(
+              'Nahj',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Appcolors.backgroundcolor,
+              ),
+            ),
+          ],
+        ),
       ),
-      nextScreen: const Navbar(),
-      splashIconSize: 500,
-      duration: 3500,
-      centered: true,
     );
   }
 }

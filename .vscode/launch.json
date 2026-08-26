@@ -17,7 +17,7 @@
             "type": "dart",
             "args": [
                 "-d",
-                "b0a14512"
+                "emulator-5554"
             ]
         }
     ]

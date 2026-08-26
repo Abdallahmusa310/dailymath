@@ -1,3 +1,5 @@
+import 'package:nahj/core/routing/go_router.dart';
+
 import '/screens/students_screen/cubit/student_cubit.dart';
 import '/db/box_manager.dart';
 import '/screens/groups_screen/cubit/group_cubit.dart';
@@ -34,12 +36,9 @@ class Nahj extends StatelessWidget {
           ),
           BlocProvider(create: (context) => StudentCubit())
         ],
-        child: MaterialApp(
+        child: MaterialApp.router(
+          routerConfig: router,
           debugShowCheckedModeBanner: false,
-          routes: {
-            'SplashScreen': (context) => const Splashscreen(),
-          },
-          initialRoute: 'SplashScreen',
         ),
       ),
     );
