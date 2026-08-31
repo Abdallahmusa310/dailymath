@@ -1,0 +1,17 @@
+{
+    "choose_account": {
+        "teacher": {
+            "title": "Teacher",
+            "description": "You can organize your groups, track attendance and payments, and add assignments for each lesson."
+        },
+        "student": {
+            "title": "Student",
+            "description": "Track your lesson schedules, attendance, and payments regularly."
+        },
+        "Choose_language": "Choose Language",
+        "Arabic": "Arabic",
+        "English": "English",
+        "Confirm": "Confirm",
+        "Choose": "Choose"
+    }
+}

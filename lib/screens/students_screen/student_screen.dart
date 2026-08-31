@@ -1,4 +1,4 @@
-import 'package:nahj/core/colors/app_colors.dart';
+import 'package:nahj/core/theme/app_colors.dart';
 import 'package:nahj/screens/students_screen/cubit/student_cubit.dart'
     show StudentCubit, AddStudentSuccess, StudentState;
 import 'package:nahj/screens/students_screen/widgets/student_sheet.dart';

@@ -2,7 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nahj/core/colors/app_colors.dart';
+import 'package:nahj/core/helper/app_constants.dart';
+import 'package:nahj/core/theme/app_colors.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -28,7 +29,7 @@ class _SplashscreenState extends State<Splashscreen> {
 
   void _goToChooseAccountType() {
     if (!mounted) return;
-    context.go('/ChooseAccountScreen');
+    context.replace(AppConstants.chooseAccountScreen);
   }
 
   @override

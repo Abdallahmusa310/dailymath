@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nahj/core/colors/app_colors.dart';
+import 'package:nahj/core/theme/app_colors.dart';
 import 'package:nahj/screens/students_screen/cubit/student_cubit.dart';
 import 'package:nahj/screens/students_screen/widgets/student_card.dart';
 

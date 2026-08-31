@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nahj/core/colors/app_colors.dart';
+import 'package:nahj/core/theme/app_colors.dart';
 
 class TeacherSignUpScreen extends StatefulWidget {
   const TeacherSignUpScreen({super.key});

@@ -1,15 +1,11 @@
-import 'package:nahj/core/routing/go_router.dart';
-
-import '/screens/students_screen/cubit/student_cubit.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:nahj/core/app/nahj_app.dart';
 import '/db/box_manager.dart';
-import '/screens/groups_screen/cubit/group_cubit.dart';
 import '/models/group_model.dart';
 import '/models/student_model.dart';
 import '/simple_bloc_observer.dart';
-import 'features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/adapters.dart';
 
 void main() async {
@@ -18,29 +14,14 @@ void main() async {
   Hive.registerAdapter(GroupModelAdapter());
   Hive.registerAdapter(StudentModelAdapter());
   await BoxManager.instance.initialize();
-  runApp(const Nahj());
-}
-
-class Nahj extends StatelessWidget {
-  const Nahj({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => GroupCubit(),
-          ),
-          BlocProvider(create: (context) => StudentCubit())
-        ],
-        child: MaterialApp.router(
-          routerConfig: router,
-          debugShowCheckedModeBanner: false,
-        ),
-      ),
-    );
-  }
+  await EasyLocalization.ensureInitialized();
+  runApp(EasyLocalization(
+    supportedLocales: const [Locale('ar'), Locale('en')],
+    path: 'assets/translation',
+    fallbackLocale: const Locale('ar'),
+    startLocale: const Locale('ar'),
+    saveLocale: true,
+    useOnlyLangCode: true,
+    child: const Nahj(),
+  ));
 }
